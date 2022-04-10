@@ -15,6 +15,7 @@ pub struct App{
     pub author: String,
     pub args: HashMap<String, Vec<String>>
 }
+
 /// Implementing all methods for
 /// your app that give you the freedom
 /// to choose what you'd like to do.
@@ -36,7 +37,7 @@ impl App{
         let args_clone_one: Vec<String> = args.clone();
         let arg_clone_one: String = arg.clone();
         let arg_clone_two: String = arg_clone_one.clone();
-        let arg_first_letter: String = self.clean_split(arg_clone_one, String::from(""))[0].clone();
+        let arg_first_letter: String = self.clean_split(arg_clone_one, String::from(""))[1].clone();
         let minus_arg: String = format!("-{}", arg_first_letter);
         let minus_minus_arg: String = format!("--{}", arg_clone_two);
         if args.contains(&minus_arg) || args_clone_one.contains(&minus_minus_arg) {
@@ -64,18 +65,19 @@ impl App{
         let name_clone_one: String = name.clone();
         let name_clone_two: String = name_clone_one.clone();
         let name_clone_three: String = name_clone_two.clone();
+        let name_clone_four: String = name_clone_three.clone();
         let mut result: String = String::from("");
-        let arg_first_letter: String = self.clean_split(name_clone_one, String::from(""))[0].clone();
+        let arg_first_letter: String = self.clean_split(name_clone_one, String::from(""))[1].clone();
         let minus_arg: String = format!("-{}", arg_first_letter);
         let minus_arg_clone: String = minus_arg.clone();
         let minus_minus_arg: String = format!("--{}", name_clone_two);
         let minus_minus_arg_clone: String = minus_minus_arg.clone();
-        if args_clone_one.contains(&minus_arg){
+        if &self.args[name_clone_four][1].clone() == "true".to_string() && args_clone_one.contains(&minus_arg){
             let name_index: usize = args_clone_three.iter().position(|r| r == &minus_arg_clone).unwrap();
             let next_pos: usize = name_index + 1;
             result = args_clone_four[next_pos].clone();
         }
-        else if args_clone_two.contains(&minus_minus_arg) {
+        else if &self.args[name_clone_four][1].clone() == "true".to_string() && args_clone_two.contains(&minus_minus_arg) {
             let name_index: usize = args_clone_three.iter().position(|r| r == &minus_minus_arg_clone).unwrap();
             let next_pos: usize = name_index + 1;
             result = args_clone_four[next_pos].clone();
@@ -134,14 +136,14 @@ impl App{
             if value[1].clone() == "true" {
                 let key_clone_one: String = key.clone();
                 let key_clone_two: String = key_clone_one.clone();
-                let first_letter: String = self.clean_split(key_clone_one, String::from(""))[0].clone();
+                let first_letter: String = self.clean_split(key_clone_one, String::from(""))[1].clone();
                 let command_help: String = format!("-{} --{} DATA", first_letter, key_clone_two);
                 help_string_vec.push(command_help);
             }
             else {
                 let key_clone_one: String = key.clone();
                 let key_clone_two: String = key_clone_one.clone();
-                let first_letter: String = self.clean_split(key_clone_one, String::from(""))[0].clone();
+                let first_letter: String = self.clean_split(key_clone_one, String::from(""))[1].clone();
                 let command_help: String = format!("-{} --{}", first_letter, key_clone_two);
                 help_string_vec.push(command_help);
             }

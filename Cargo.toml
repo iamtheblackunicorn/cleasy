@@ -1,8 +1,17 @@
 [package]
 name = "cleasy"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+description= "Making command-line interfaces in Rust easy."
+homepage = "https://github.com/iamtheblackunicorn/cleasy"
+repository = "https://github.com/iamtheblackunicorn/cleasy"
+documentation = "https://github.com/iamtheblackunicorn/cleasy"
+readme = "README.markdown"
+keywords = [
+	"argument",
+	"cli",
+	"arg",
+	"parser",
+]
+categories = ["command-line-interface"]
+exclude = ["/.github"]
