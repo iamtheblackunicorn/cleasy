@@ -72,12 +72,12 @@ impl App{
         let minus_arg_clone: String = minus_arg.clone();
         let minus_minus_arg: String = format!("--{}", name_clone_two);
         let minus_minus_arg_clone: String = minus_minus_arg.clone();
-        if &self.args[name_clone_four][1].clone() == "true".to_string() && args_clone_one.contains(&minus_arg){
+        if &self.args[&name_clone_four][1].clone() == "true" && args_clone_one.contains(&minus_arg){
             let name_index: usize = args_clone_three.iter().position(|r| r == &minus_arg_clone).unwrap();
             let next_pos: usize = name_index + 1;
             result = args_clone_four[next_pos].clone();
         }
-        else if &self.args[name_clone_four][1].clone() == "true".to_string() && args_clone_two.contains(&minus_minus_arg) {
+        else if &self.args[&name_clone_four][1].clone() == "true" && args_clone_two.contains(&minus_minus_arg) {
             let name_index: usize = args_clone_three.iter().position(|r| r == &minus_minus_arg_clone).unwrap();
             let next_pos: usize = name_index + 1;
             result = args_clone_four[next_pos].clone();
