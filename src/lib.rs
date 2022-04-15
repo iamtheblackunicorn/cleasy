@@ -137,14 +137,14 @@ impl App{
                 let key_clone_one: String = key.clone();
                 let key_clone_two: String = key_clone_one.clone();
                 let first_letter: String = self.clean_split(key_clone_one, String::from(""))[1].clone();
-                let command_help: String = format!("-{} --{} DATA", first_letter, key_clone_two);
+                let command_help: String = format!("-{} --{} DATA  {}", first_letter, key_clone_two, value[0]);
                 help_string_vec.push(command_help);
             }
             else {
                 let key_clone_one: String = key.clone();
                 let key_clone_two: String = key_clone_one.clone();
                 let first_letter: String = self.clean_split(key_clone_one, String::from(""))[1].clone();
-                let command_help: String = format!("-{} --{}", first_letter, key_clone_two);
+                let command_help: String = format!("-{} --{}        {}", first_letter, key_clone_two, value[0]);
                 help_string_vec.push(command_help);
             }
         }
