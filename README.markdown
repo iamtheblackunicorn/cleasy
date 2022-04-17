@@ -1,14 +1,14 @@
-# CLEASY :cake:
+# CLEASY
 
-***Making command-line interfaces in Rust easy.*** :cake:
+***Making command-line interfaces in Rust easy.***
 
 ![GitHub CI](https://github.com/iamtheblackunicorn/cleasy/actions/workflows/rust.yml/badge.svg)
 
-## ABOUT :books:
+## ABOUT
 
 I've been writing an awful lot of command line applications in Rust lately. I'm sick and tired of manually parsing the options passed to my programs, so I decided to write a library to make my life easier. I know `clap` would have been option but I don't like drama. `clap` is drama I am not too keen to get into right now.
 
-## FEATURES :test_tube:
+## FEATURES
 
 - Blazingly fast.
 - Easy to use, no drama.
@@ -81,14 +81,14 @@ fn main(){
 }
 ```
 
-## CHANGELOG :black_nib:
+## CHANGELOG
 
 ### Version 1.0.0
 
 - Initial release.
 - Upload to GitHub.
 
-## NOTE :scroll:
+## NOTE
 
-- *Cleasy :cake:* by Alexander Abraham :black_heart: a.k.a. *"The Black Unicorn" :unicorn:*
+- *Cleasy* by Alexander Abraham a.k.a. *"The Black Unicorn"*
 - Licensed under the MIT license.
