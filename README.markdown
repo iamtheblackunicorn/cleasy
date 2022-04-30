@@ -88,6 +88,11 @@ fn main(){
 - Initial release.
 - Upload to GitHub.
 
+### Version 1.1.0
+
+- Fixed the help message.
+- Better docs.
+
 ## NOTE
 
 - *Cleasy* by Alexander Abraham a.k.a. *"The Black Unicorn"*
