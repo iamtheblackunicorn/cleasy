@@ -23,12 +23,13 @@ impl App{
     /// Instantiates the "App" struct.
     pub fn new(name: String, version: String, author: String) -> App {
         let mut args: HashMap<String, Vec<String>> = HashMap::new();
-        return App{
+        let mut instance: App = App {
             name: name,
             version: version,
             author: author,
             args:args
         };
+        return instance;
     }
     /// Checks if "-a" or "--arg" was used.
     pub fn arg_was_used(&self, arg: String) -> bool {
@@ -148,8 +149,6 @@ impl App{
                 help_string_vec.push(command_help);
             }
         }
-        help_string_vec.push(format!("-{} --{}         {}", String::from("h"), String::from("help"), String::from("Displays this help message.")));
-        help_string_vec.push(format!("-{} --{}      {}", String::from("v"), String::from("version"), String::from("Displays version information.")));
         let help_string = help_string_vec.join("\n");
         return help_string;
     }

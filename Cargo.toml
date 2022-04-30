@@ -1,6 +1,6 @@
 [package]
 name = "cleasy"
-version = "1.1.0"
+version = "1.0.0"
 edition = "2021"
 license = "MIT"
 description= "Making command-line interfaces in Rust easy."
